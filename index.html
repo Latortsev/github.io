@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Красивых Кнопок</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        h1 {
+            color: white;
+            margin-bottom: 40px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255,255,255,0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%);
+            transform-origin: 50% 50%;
+        }
+        
+        .btn:focus:not(:active)::after {
+            animation: ripple 1s ease-out;
+        }
+        
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(50, 50);
+                opacity: 0;
+            }
+        }
+        
+        .btn-1 {
+            background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+            color: white;
+        }
+        
+        .btn-2 {
+            background: linear-gradient(45deg, #4ECDC4, #44A08D);
+            color: white;
+        }
+        
+        .btn-3 {
+            background: linear-gradient(45deg, #45B649, #DCE35B);
+            color: white;
+        }
+        
+        .btn-4 {
+            background: linear-gradient(45deg, #FF5F6D, #FFC371);
+            color: white;
+        }
+        
+        .btn-5 {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+        
+        .btn-6 {
+            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            color: #333;
+        }
+        
+        .btn-7 {
+            background: linear-gradient(45deg, #a8edea, #fed6e3);
+            color: #333;
+        }
+        
+        .btn-8 {
+            background: linear-gradient(45deg, #ffecd2, #fcb69f);
+            color: #333;
+        }
+        
+        .btn-9 {
+            background: linear-gradient(45deg, #ff8a80, #ffccbc);
+            color: white;
+        }
+        
+        .btn-10 {
+            background: linear-gradient(45deg, #b39ddb, #c5cae9);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .buttons-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>10 Красивых Кнопок</h1>
+        <div class="buttons-grid">
+            <button class="btn btn-1" onclick="handleClick(1)">Кнопка 1</button>
+            <button class="btn btn-2" onclick="handleClick(2)">Кнопка 2</button>
+            <button class="btn btn-3" onclick="handleClick(3)">Кнопка 3</button>
+            <button class="btn btn-4" onclick="handleClick(4)">Кнопка 4</button>
+            <button class="btn btn-5" onclick="handleClick(5)">Кнопка 5</button>
+            <button class="btn btn-6" onclick="handleClick(6)">Кнопка 6</button>
+            <button class="btn btn-7" onclick="handleClick(7)">Кнопка 7</button>
+            <button class="btn btn-8" onclick="handleClick(8)">Кнопка 8</button>
+            <button class="btn btn-9" onclick="handleClick(9)">Кнопка 9</button>
+            <button class="btn btn-10" onclick="handleClick(10)">Кнопка 10</button>
+        </div>
+    </div>
+    
+    <script>
+        function handleClick(buttonNumber) {
+            alert(`Вы нажали кнопку ${buttonNumber}!`);
+            
+            // Добавляем анимацию нажатия
+            const btn = event.target;
+            btn.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                btn.style.transform = '';
+            }, 150);
+        }
+    </script>
+</body>
+</html>

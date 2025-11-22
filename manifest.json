@@ -1,21 +1,16 @@
 {
-  "code": "update_prices_button",
-  "name": {
-    "ru": "Обновить цены из Яндекс‑Функции",
-    "en": "Update Prices from Yandex Function"
-  },
-  "description": {
-    "ru": "Кнопка в карточке сделки для вызова Яндекс‑Функции",
-    "en": "Deal toolbar button to call Yandex Function"
-  },
-  "version": "1.0.0",
-  "vendor": "Oleg",
-  "placement": {
-    "CRM_DEAL_DETAIL_TOOLBAR": {
-      "title": "Обновить цены",
-      "handler": "https://yourusername.github.io/update-prices-app/index.html"
+  "short_name": "Кнопки",
+  "name": "10 Красивых Кнопок",
+  "description": "Интерактивная страница с 10 красивыми активными кнопками",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%23667eea'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='16' fill='%23ffffff'%3E10%3C/text%3E%3C/svg%3E",
+      "sizes": "48x48",
+      "type": "image/svg+xml"
     }
-  },
-  "auth": "N",
-  "scope": ["crm"]
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#667eea",
+  "background_color": "#ffffff"
 }
